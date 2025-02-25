@@ -5,10 +5,10 @@ import {
 	INodeProperties,
 } from 'n8n-workflow';
 
-export class HttpBinApi implements ICredentialType {
-	name = 'httpbinApi';
-	displayName = 'HttpBin API';
-	documentationUrl = '<your-docs-url>';
+export class CisAssessmentApi implements ICredentialType {
+	name = 'cisAssessmentApi';
+	displayName = 'CisAssessment API';
+	documentationUrl = 'https://connect.cisassessment.app';
 	properties: INodeProperties[] = [
 		{
 			displayName: 'Token',
@@ -17,13 +17,13 @@ export class HttpBinApi implements ICredentialType {
 			default: '',
 			typeOptions: {
 				password: true,
-			}
+			},
 		},
 		{
 			displayName: 'Domain',
 			name: 'domain',
 			type: 'string',
-			default: 'https://httpbin.org',
+			default: 'https://0a7d-2804-d4b-7ac2-cb00-804c-cbfd-609a-1405.ngrok-free.app',
 		},
 	];
 
@@ -44,7 +44,7 @@ export class HttpBinApi implements ICredentialType {
 	test: ICredentialTestRequest = {
 		request: {
 			baseURL: '={{$credentials?.domain}}',
-			url: '/bearer',
+			url: '/api/v1/company/bearer',
 		},
 	};
 }
