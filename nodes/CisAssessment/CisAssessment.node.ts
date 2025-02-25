@@ -12,7 +12,7 @@ export class CisAssessment implements INodeType {
 		name: 'cisAssessment',
 		icon: 'file:cisAssessment.svg',
 		group: ['transform'],
-		version: 1,
+		version: [1, 1],
 		description: 'Interact with CIS Assessment API',
 		defaults: {
 			name: 'CIS Assessment',
@@ -65,9 +65,7 @@ export class CisAssessment implements INodeType {
 						error.context.itemIndex = itemIndex;
 						throw error;
 					}
-					throw new NodeOperationError(this.getNode(), error, {
-						itemIndex,
-					});
+					throw new NodeOperationError(this.getNode(), error, { itemIndex });
 				}
 			}
 		}
