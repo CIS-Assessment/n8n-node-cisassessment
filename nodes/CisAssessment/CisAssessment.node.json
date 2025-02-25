@@ -1,5 +1,5 @@
 {
-	"node": "n8n-nodes-base.CisAssessment",
+	"node": "n8n-nodes-base.httpbin",
 	"nodeVersion": "1.0.1",
 	"codexVersion": "1.0.1",
 	"categories": ["Miscellaneous"],

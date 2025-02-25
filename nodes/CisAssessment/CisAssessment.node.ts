@@ -10,15 +10,21 @@ export class CisAssessment implements INodeType {
 	description: INodeTypeDescription = {
 		displayName: 'CIS Assessment',
 		name: 'cisAssessment',
-		icon: 'file:cisAssessment.svg',
+		icon: 'file:cis-assessment.svg',
 		group: ['transform'],
-		version: [1, 1],
+		version: 1,
 		description: 'Interact with CIS Assessment API',
 		defaults: {
 			name: 'CIS Assessment',
 		},
 		inputs: ['main'],
 		outputs: ['main'],
+		credentials: [
+			{
+				name: 'cisAssessmentApi',
+				required: true,
+			},
+		],
 		properties: [
 			// Node properties which the user gets displayed and
 			// can change on the node.
