@@ -29,7 +29,7 @@ export class CisAssessment implements INodeType {
 			// Node properties which the user gets displayed and
 			// can change on the node.
 			{
-				displayName: 'My String',
+				displayName: 'My String 1',
 				name: 'myString',
 				type: 'string',
 				default: '',
